@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "title": "Senior Electronics Engineer",
+    "company": "MakerTech Solutions",
+    "location": "San Francisco, CA (Remote)",
+    "salary": "$120,000 - $150,000",
+    "type": "Full-time",
+    "tags": ["Electronics", "Hardware", "PCB Design"],
+    "lastDateToApply": "2023-12-31",
+    "description": "We are looking for a Senior Electronics Engineer to join our team. You will be responsible for designing and developing electronic circuits and systems for our IoT products.",
+    "howToApply": "Send your resume to careers@makertech.com",
+    "postedBy": "John Doe",
+    "postedDate": "2023-11-01",
+    "externalLink": "https://makertech.com/careers"
+  }
+]
