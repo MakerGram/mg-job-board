@@ -10,7 +10,7 @@ import { getAllJobs, filterJobs } from '@/lib/jobs';
 import { Job } from '@/types';
 
 // Google Form URL for job submissions
-const JOB_SUBMISSION_FORM_URL = 'https://forms.gle/YourMakerGramJobFormID';
+const JOB_SUBMISSION_FORM_URL = 'https://link.makergram.com/job-board-application';
 
 export default function Home() {
   const [jobs, setJobs] = useState<Job[]>([]);
