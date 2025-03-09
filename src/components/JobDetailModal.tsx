@@ -22,7 +22,7 @@ export function JobDetailModal({ job, isOpen, onClose }: JobDetailModalProps) {
   const formatDate = (dateString: string) => {
     try {
       return format(new Date(dateString), 'MMMM dd, yyyy');
-    } catch (error) {
+    } catch {
       return dateString;
     }
   };
@@ -48,7 +48,7 @@ export function JobDetailModal({ job, isOpen, onClose }: JobDetailModalProps) {
       const lastDate = new Date(job.lastDateToApply);
       const today = new Date();
       return today > lastDate;
-    } catch (error) {
+    } catch {
       return false;
     }
   };

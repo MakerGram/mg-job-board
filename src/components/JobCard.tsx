@@ -21,7 +21,7 @@ export function JobCard({ job, onClick }: JobCardProps) {
   const formatPostedDate = () => {
     try {
       return formatDistanceToNow(new Date(job.postedDate), { addSuffix: true });
-    } catch (error) {
+    } catch {
       return job.postedDate;
     }
   };
