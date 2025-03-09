@@ -44,17 +44,17 @@ export function JobCard({ job, onClick }: JobCardProps) {
   return (
     <Card className="h-full flex flex-col hover:shadow-md transition-shadow border-gray-200">
       <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
           <CardTitle className="text-xl font-semibold text-gray-800">{job.title}</CardTitle>
-          <Badge variant="outline" className="ml-2 font-medium">
+          <Badge variant="outline" className="font-medium">
             {getJobTypeIcon(job.type)} {job.type}
           </Badge>
         </div>
         <div className="text-sm font-medium text-gray-600">{job.company}</div>
         <div className="text-sm text-gray-600">📍 {job.location}</div>
+        {job.salary && <div className="text-sm text-gray-600">{job.salary}</div>}
       </CardHeader>
       <CardContent className="flex-grow">
-        {job.salary && <p className="text-sm mb-2 font-medium text-gray-700">💰 {job.salary}</p>}
         <div className="flex flex-wrap gap-1 mt-2">
           {job.tags.map((tag) => (
             <Badge key={tag} variant="secondary" className="text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200">

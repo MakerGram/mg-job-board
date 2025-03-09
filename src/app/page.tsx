@@ -69,12 +69,12 @@ export default function Home() {
       <Header onPostJobClick={handlePostJobClick} />
 
       <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="lg:col-span-1">
             <SearchFilters onFilterChange={handleFilterChange} />
           </div>
 
-          <div className="md:col-span-3">
+          <div className="lg:col-span-3">
             <div className="mb-4 flex justify-between items-center">
               <h2 className="text-xl font-semibold">
                 {filteredJobs.length} {filteredJobs.length === 1 ? 'Job' : 'Jobs'} Available
@@ -82,7 +82,7 @@ export default function Home() {
             </div>
 
             {filteredJobs.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {filteredJobs.map((job) => (
                   <JobCard key={job.id} job={job} onClick={handleJobClick} />
                 ))}
