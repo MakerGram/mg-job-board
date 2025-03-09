@@ -22,7 +22,7 @@ export function JobDetailModal({ job, isOpen, onClose }: JobDetailModalProps) {
   const formatDate = (dateString: string) => {
     try {
       return format(new Date(dateString), 'MMMM dd, yyyy');
-    } catch (error) {
+    } catch {
       return dateString;
     }
   };
@@ -48,7 +48,7 @@ export function JobDetailModal({ job, isOpen, onClose }: JobDetailModalProps) {
       const lastDate = new Date(job.lastDateToApply);
       const today = new Date();
       return today > lastDate;
-    } catch (error) {
+    } catch {
       return false;
     }
   };
@@ -59,23 +59,23 @@ export function JobDetailModal({ job, isOpen, onClose }: JobDetailModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <DialogTitle className="text-2xl font-bold text-gray-800">{job.title}</DialogTitle>
               {jobClosed && (
-                <Badge variant="destructive" className="ml-2 font-medium bg-red-100 text-red-700 border border-red-200">
+                <Badge variant="destructive" className="font-medium bg-red-100 text-red-700 border border-red-200">
                   CLOSED
                 </Badge>
               )}
             </div>
-            <Badge variant="outline" className="ml-2 font-medium">
+            <Badge variant="outline" className="font-medium">
               {getJobTypeIcon(job.type)} {job.type}
             </Badge>
           </div>
           <div className="text-base text-muted-foreground mt-2">
             <div className="font-semibold">{job.company}</div>
             <div>📍 {job.location}</div>
-            {job.salary && <div className="mt-1">💰 {job.salary}</div>}
+            {job.salary && <div className="text-base text-muted-foreground">{job.salary}</div>}
           </div>
         </DialogHeader>
 
