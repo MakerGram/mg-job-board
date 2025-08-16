@@ -2,24 +2,22 @@
 
 Crowdsourced job board for the MakerGram community.
 
-## Getting Started
+## Submit a Job Listing
 
-First, run the development server:
+If you want to add a job listing, please submit it at: [Post a Job : MakerGram Jobs](https://forms.gle/WxqKXTMinCqUTWen9)
+
+## Local Development
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-
